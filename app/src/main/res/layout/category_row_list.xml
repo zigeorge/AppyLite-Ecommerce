@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cvContainer"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dim120"
+    android:layout_marginBottom="@dimen/dim5"
+    card_view:cardCornerRadius="2dp"
+    card_view:cardElevation="@dimen/dim5"
+    card_view:cardUseCompatPadding="false">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/ivCategoryBackground"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/progress_loading"
+            android:scaleType="center"/>
+
+        <RelativeLayout
+            android:id="@+id/rlItemContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/dim10"
+            android:background="@color/transparent_white">
+
+            <ImageView
+                android:id="@+id/ivCategoryThumb"
+                android:layout_width="@dimen/dim100"
+                android:layout_height="@dimen/dim100"
+                android:scaleType="center"
+                android:src="@drawable/sample_image"
+                android:layout_centerVertical="true"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_centerVertical="true"
+                android:paddingLeft="@dimen/dim10"
+                android:layout_toLeftOf="@+id/ivIndicator"
+                android:layout_toRightOf="@+id/ivCategoryThumb">
+                <TextView
+                    android:id="@+id/tvCategoryName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/dimTex25"
+                    android:text="Category 01"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/tvCatNoOfProds"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(12)"
+                    android:textColor="@color/black"/>
+            </LinearLayout>
+            <ImageView
+                android:id="@+id/ivIndicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_indicator_right"/>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>
